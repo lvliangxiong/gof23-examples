@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration strict="true" monitorInterval="300">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>-->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %t %highlight{%-5level} %class{5}\n \t %msg%n%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <!--<Logger name="org.springframework" level="debug"></Logger>-->
+        <!--<Logger name="org.mybatis" level="debug"></Logger>-->
+        <Logger name="com.joey.learning.gof23" level="trace"></Logger>
+        <Root level="error">
+            <Appender-ref ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
